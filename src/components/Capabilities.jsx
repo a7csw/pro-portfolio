@@ -34,23 +34,23 @@ const Capabilities = () => {
   ]
 
   return (
-    <section id="capabilities" ref={ref} className="py-24 lg:py-32 bg-gradient-to-b from-black via-blue-950/5 to-black">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="capabilities" ref={ref} className="py-16 sm:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-black via-blue-950/5 to-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-3xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
             What I build
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
             Solutions designed for impact, not just implementation
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
           {capabilities.map((capability, index) => (
             <motion.div
               key={index}
@@ -62,22 +62,22 @@ const Capabilities = () => {
               {/* Gradient border effect */}
               <div className={`absolute inset-0 bg-gradient-to-r ${capability.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`} />
               
-              <div className="relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300 h-full">
-                <div className={`inline-block bg-gradient-to-r ${capability.gradient} bg-clip-text text-transparent mb-4`}>
-                  <div className="text-sm font-semibold uppercase tracking-wide">
+              <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8 hover:border-white/20 transition-all duration-300 h-full">
+                <div className={`inline-block bg-gradient-to-r ${capability.gradient} bg-clip-text text-transparent mb-3 lg:mb-4`}>
+                  <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide">
                     Service {index + 1}
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 lg:mb-4">
                   {capability.title}
                 </h3>
                 
-                <p className="text-gray-400 mb-6">
+                <p className="text-sm sm:text-base text-gray-400 mb-4 lg:mb-6">
                   {capability.description}
                 </p>
 
-                <div className="space-y-3">
+                <div className="space-y-2 lg:space-y-3">
                   {capability.outcomes.map((outcome, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className={`mt-1 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${capability.gradient}`} />

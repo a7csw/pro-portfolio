@@ -7,26 +7,26 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="contact" ref={ref} className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="contact" ref={ref} className="py-16 sm:py-20 lg:py-24 xl:py-32 relative overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] bg-blue-500/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             Let's build something
             <br />
             <span className="text-gradient">exceptional together</span>
           </h2>
           
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto">
             Whether you need AI automation, a custom web application, or technical strategy—I'm here to help turn your vision into reality.
           </p>
 
@@ -34,9 +34,9 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-white/5 to-white/0 border border-white/10 rounded-2xl p-8 lg:p-12 mb-12"
+            className="bg-gradient-to-br from-white/5 to-white/0 border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-12 mb-8 sm:mb-10 lg:mb-12"
           >
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
               <div>
                 <div className="text-3xl mb-3">⚡</div>
                 <div className="font-semibold mb-2">Fast Response</div>
@@ -54,17 +54,17 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="border-t border-white/10 pt-8">
+            <div className="border-t border-white/10 pt-6 sm:pt-8">
               <a
                 href="mailto:alfaiadiabood@gmail.com?subject=Project%20inquiry%20from%20your%20portfolio"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-base sm:text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
               >
                 <span>Send me a message</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
-              <div className="mt-4 text-sm text-gray-400">
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-400">
                 <a href="mailto:alfaiadiabood@gmail.com?subject=Project%20inquiry%20from%20your%20portfolio" className="hover:text-white transition-colors">
                   alfaiadiabood@gmail.com
                 </a>
